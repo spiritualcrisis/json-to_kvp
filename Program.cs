@@ -25,7 +25,7 @@ namespace jsondatatest
             {
                 
                     // now split the lines and get json data
-                    string[] splittedLine = line.Split("|");
+                    string[] splittedLine = line.Split(",");
                     var obj = JObject.Parse(splittedLine[4]);
                     var result = obj.Descendants()
                     .OfType<JProperty>()
